@@ -18,11 +18,12 @@ import UIKit
     // Animation property
     public var animation: UITableViewRowAnimation = .fade
     
-    public init() {
-        
+    public override init() {
+        super.init()
     }
     
     public init(Parents: [Parent]) {
+        super.init()
         arrayParents = Parents
     }
     
@@ -32,6 +33,7 @@ import UIKit
      */
     public init(indices: [String]) {
         
+        super.init()
         for i in 0..<indices.count{
             
             // index to be processed
@@ -163,6 +165,7 @@ import UIKit
      */
     public init(parents: NSArray, childrenKey: String, expandableKey: String? = nil, key: String? = nil) {
         
+        super.init()
         for i in 0..<parents.count {
             
             let parent = parents[i] as? NSDictionary
@@ -605,7 +608,7 @@ extension String {
     public var id: String = ""
     public var givenIndex: String = ""
     
-    public init() {
+    public override init() {
         
     }
     public init(index: String, id: String, givenIndex: String) {
